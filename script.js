@@ -90,9 +90,9 @@ window.addEventListener('scroll', () => {
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('text-primary');
+        link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('text-primary');
+            link.classList.add('active');
         }
     });
 });
