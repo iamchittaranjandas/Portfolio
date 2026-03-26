@@ -1,759 +1,551 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chitta Ranjan Das | Sr. Software Developer</title>
-    <meta name="description" content="Portfolio of Chitta Ranjan Das - Web Developer | Cloud Solutions | API Specialist | 5+ Years' Experience building scalable & secure systems with .NET Core, C#, Azure, and modern web technologies.">
-    <meta name="keywords" content="Chitta Ranjan Das, Web Developer, .NET Core, C#, Azure, API Specialist, Cloud Solutions, Software Developer, NIC, Full Stack Developer">
-    <meta name="author" content="Chitta Ranjan Das">
-    <meta property="og:title" content="Chitta Ranjan Das | Sr. Software Developer">
-    <meta property="og:description" content="Web Developer | Cloud Solutions | API Specialist | 5+ Years' Experience | Building Scalable & Secure Systems">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Chitta Ranjan Das | Sr. Software Developer">
+    <meta name="description"
+        content="Portfolio of Chitta Ranjan Das - Web Developer | Cloud Solutions | API Specialist | 5+ Years' Experience building scalable & secure systems with .NET Core, C#, Azure, and modern web technologies.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/x-icon;base64,">
 </head>
+
 <body>
-    <!-- Animated Orbs Background -->
-    <div class="background-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-        <div class="orb orb-4"></div>
-    </div>
-
-    <!-- Cursor glow effect -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>CRD<span class="logo-bracket"> /&gt;</span>
-            </a>
+            <a href="#hero" class="nav-logo">CRD.</a>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </button>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-content">
-            <div class="hero-avatar animate-on-scroll">
-                <div class="avatar-ring">
-                    <img src="profile.jpg" alt="Chitta Ranjan Das" class="avatar-img">
-                </div>
-            </div>
-            <div class="hero-badge animate-on-scroll">
-                <i class="fas fa-circle pulse-dot"></i> Available for opportunities
-            </div>
-            <h1 class="hero-title animate-on-scroll">
-                Hi, I'm <span class="gradient-text">Chitta Ranjan Das</span>
-            </h1>
-            <div class="typewriter-container animate-on-scroll">
-                <span class="typewriter-prefix">I build </span>
-                <span class="typewriter-text" id="typewriter"></span>
-                <span class="typewriter-cursor">|</span>
-            </div>
-            <p class="hero-description animate-on-scroll">
-                Sr. Software Developer with 5.6+ years of experience crafting robust, scalable applications
-                using <strong>.NET Core</strong>, <strong>C#</strong>, <strong>Azure</strong>, and modern web technologies.
-                Committed to building <strong>secure</strong>, <strong>cloud-native</strong> systems for government and enterprise clients.
-            </p>
-            <div class="hero-cta animate-on-scroll">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> View My Work
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i> Get In Touch
-                </a>
-                <a href="https://www.linkedin.com/in/iamchittaranjandas/" target="_blank" rel="noopener" class="btn btn-outline">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile
-                </a>
-            </div>
-            <div class="hero-stats animate-on-scroll">
-                <div class="stat">
-                    <span class="stat-number" data-target="5.6">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="7">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="2">0</span>
-                    <span class="stat-label">Best Performer Awards</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">LinkedIn Connections</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="mouse-wheel"></div>
-            </div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
+    <!-- Main Content wrapped for spacing -->
+    <main class="main-content">
+        <!-- Hero / Bento Top Section -->
+        <section id="hero" class="section bento-section">
+            <div class="bento-grid hero-grid">
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">01.</span> About Me
-            </h2>
-            <div class="about-grid">
-                <div class="about-text animate-on-scroll">
-                    <p>
-                        I'm a passionate software developer who thrives on turning complex business requirements
-                        into elegant, efficient solutions. With over 5.6 years in the industry, I've had the
-                        privilege of working on enterprise-grade applications for government organizations and
-                        private enterprises alike.
-                    </p>
-                    <p>
-                        My journey began as an intern at Appman Technologies, where I discovered my love for
-                        backend architecture and API design. Since then, I've grown into a senior role, leading
-                        development efforts on critical systems including bill management platforms, HRMS solutions,
-                        and safety compliance applications.
-                    </p>
-                    <p>
-                        I'm an advocate of clean architecture, SOLID principles, and continuous learning. Recently,
-                        I've been exploring AI-assisted development workflows and have earned certifications from
-                        Anthropic in leveraging AI tools for software engineering.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Dasarathapur, Odisha, India</span>
+                <!-- Main Intro Card -->
+                <div class="bento-card col-span-2 row-span-2 bento-intro align-bottom reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <div class="availability-badge">
+                            <span class="status-dot"></span> Available for opportunities
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>BCA, Utkal University</span>
+                        <h1 class="title-xl">
+                            Hi, I'm <span class="text-accent">Chitta</span>
+                        </h1>
+                        <div class="typewriter-container mono-text">
+                            <span class="typewriter-prefix">> I build_ </span>
+                            <span class="typewriter-text text-accent" id="typewriter"></span><span
+                                class="cursor">|</span>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Sr. Software Developer</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-landmark"></i>
-                            <span>Working with NIC, Govt. of India</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Anthropic Certified</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span>1,994+ LinkedIn Followers</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image animate-on-scroll">
-                    <div class="about-award">
-                        <div class="about-award-border">
-                            <img src="aboutus.jpg" alt="Best Performer Award - Tatwa Technologies" class="about-award-img">
-                        </div>
-                        <p class="award-caption"><i class="fas fa-trophy"></i> Best Performer - Technology Team, Tatwa Technologies</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section section-alt" id="experience">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">02.</span> Experience
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-badge current">Current</div>
-                        <h3>Sr. Software Developer</h3>
-                        <h4><i class="fas fa-building"></i> NetCreativeMind Solutions Pvt. Ltd</h4>
-                        <p class="timeline-client"><i class="fas fa-landmark"></i> Client: NIC / Directorate of Accounts & Treasuries, Govt. of Arunachal Pradesh</p>
-                        <span class="timeline-date"><i class="fas fa-calendar"></i> Dec 2025 - Present</span>
-                        <p class="timeline-desc">Leading development of government financial management systems,
-                        building enterprise-grade applications with .NET Core and modern web technologies.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Sr. Software Developer</h3>
-                        <h4><i class="fas fa-building"></i> Silicon Techlab Pvt Ltd</h4>
-                        <p class="timeline-client"><i class="fas fa-landmark"></i> Client: NIC / Directorate of Accounts & Treasuries, Govt. of Arunachal Pradesh</p>
-                        <span class="timeline-date"><i class="fas fa-calendar"></i> Aug 2025 - Dec 2025</span>
-                        <p class="timeline-desc">Continued development on critical government projects,
-                        focusing on bill management and financial systems integration.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <h4><i class="fas fa-building"></i> Tatwa Technologies Ltd</h4>
-                        <span class="timeline-date"><i class="fas fa-calendar"></i> Oct 2021 - Jul 2025</span>
-                        <p class="timeline-desc">Developed multiple enterprise applications including HRMS,
-                        OMC portal, and safety management systems. Worked extensively with Azure cloud services,
-                        MongoDB, and REST API architecture.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <h4><i class="fas fa-building"></i> Appman Technologies Pvt. Ltd</h4>
-                        <span class="timeline-date"><i class="fas fa-calendar"></i> Mar 2020 - Oct 2021</span>
-                        <p class="timeline-desc">Built asset management and work approval systems using
-                        ASP.NET and SQL Server. Gained strong foundation in enterprise development practices.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Software Intern</h3>
-                        <h4><i class="fas fa-building"></i> Appman Technologies Pvt. Ltd</h4>
-                        <span class="timeline-date"><i class="fas fa-calendar"></i> Jun 2019 - Mar 2020</span>
-                        <p class="timeline-desc">Started professional journey learning ASP.NET, SQL Server,
-                        and core software development practices.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">03.</span> Featured Projects
-            </h2>
-            <div class="projects-grid">
-                <!-- GitHub Showcase: dotnet-enterprise-api -->
-                <a href="https://github.com/iamchittaranjandas/dotnet-enterprise-api" target="_blank" rel="noopener" class="project-card featured github-project animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-tag open-source">Open Source</span>
-                            <div class="github-badges">
-                                <span class="gh-badge"><i class="fas fa-star"></i> 19</span>
-                                <span class="gh-badge"><i class="fas fa-code-fork"></i> 8</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="project-title">dotnet-enterprise-api</h3>
-                    <p class="project-description">
-                        Production-ready .NET 9 enterprise API boilerplate featuring multi-database support
-                        (SQL Server, PostgreSQL, MySQL, Oracle), Redis distributed caching, resilience patterns,
-                        Unit of Work, response compression, and clean architecture with Dapper & ADO.NET.
-                    </p>
-                    <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Multi-database: SQL Server, PostgreSQL, MySQL, Oracle</li>
-                        <li><i class="fas fa-check"></i> Redis distributed & output caching</li>
-                        <li><i class="fas fa-check"></i> Production hardened: CORS, compression, resilience</li>
-                        <li><i class="fas fa-check"></i> Clean Architecture with Unit of Work pattern</li>
-                    </ul>
-                    <div class="project-recent-commits">
-                        <span class="commits-label"><i class="fas fa-code-commit"></i> Recent Activity</span>
-                        <div class="mini-commits">
-                            <div class="mini-commit"><span class="mc-sha">88224b2</span> Update README with Redis caching docs</div>
-                            <div class="mini-commit"><span class="mc-sha">97b43f9</span> Add Redis support with unit tests</div>
-                            <div class="mini-commit"><span class="mc-sha">80728a9</span> Harden for production: compression, CORS, UoW</div>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>.NET 9</span>
-                        <span>Dapper</span>
-                        <span>ADO.NET</span>
-                        <span>Redis</span>
-                        <span>SQL Server</span>
-                        <span>PostgreSQL</span>
-                        <span>MySQL</span>
-                        <span>Oracle</span>
-                    </div>
-                </a>
-
-                <!-- SPARSH -->
-                <div class="project-card featured enterprise-project animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-tag enterprise">Enterprise</span>
-                            <span class="project-tag ongoing">Ongoing</span>
-                            <div class="github-badges">
-                                <span class="gh-badge"><i class="fas fa-landmark"></i> Govt. Project</span>
-                                <span class="gh-badge"><i class="fas fa-users"></i> NIC Client</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="project-title">SPARSH Bill Management System</h3>
-                    <p class="project-client"><i class="fas fa-landmark"></i> NIC / Treasury Dept, Arunachal Pradesh Govt</p>
-                    <p class="project-description">
-                        Comprehensive bill management platform for Arunachal Pradesh State Health Society.
-                        Processes health scheme bills, manages payees, and handles financial transactions
-                        with PFMS integration for secure government fund disbursement.
-                    </p>
-                    <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Clean Architecture with Repository Pattern</li>
-                        <li><i class="fas fa-check"></i> PFMS & RBI NEFT/RTGS API Integration</li>
-                        <li><i class="fas fa-check"></i> Multi-stage Approval Workflows</li>
-                        <li><i class="fas fa-check"></i> Role-based Access Control & Audit Trails</li>
-                    </ul>
-                    <div class="project-recent-commits">
-                        <span class="commits-label"><i class="fas fa-layer-group"></i> Key Modules</span>
-                        <div class="mini-commits">
-                            <div class="mini-commit"><span class="mc-sha">PFMS</span> Integrated PFMS & RBI NEFT/RTGS APIs for fund disbursement</div>
-                            <div class="mini-commit"><span class="mc-sha">RBAC</span> Role-based access control with audit trails & secure auth</div>
-                            <div class="mini-commit"><span class="mc-sha">Reports</span> Dynamic report generation with Excel/PDF export</div>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>.NET Core 8</span>
-                        <span>PostgreSQL</span>
-                        <span>Dapper</span>
-                        <span>Bootstrap 5</span>
-                        <span>jQuery</span>
-                        <span>AJAX</span>
-                        <span>Select2</span>
-                        <span>DataTables</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-tag ongoing">Ongoing</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">HRMS Web API</h3>
-                    <p class="project-description">
-                        Robust Human Resource Management System with React front-end for efficient
-                        employee management and data retrieval. Dynamic and responsive interface
-                        deployed on Azure App Services.
-                    </p>
-                    <div class="project-tech">
-                        <span>.NET 9</span>
-                        <span>MS SQL</span>
-                        <span>Dapper</span>
-                        <span>React</span>
-                        <span>Azure</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                    </div>
-                    <h3 class="project-title">School Management System</h3>
-                    <p class="project-description">
-                        Full-stack school management platform with Blazor WebAssembly dashboards,
-                        MongoDB backend, and JWT authentication. Deployed on Azure with monitoring services.
-                    </p>
-                    <div class="project-tech">
-                        <span>.NET 9</span>
-                        <span>Blazor WASM</span>
-                        <span>MongoDB</span>
-                        <span>REST APIs</span>
-                        <span>Azure</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-clipboard-list"></i>
-                        </div>
-                    </div>
-                    <h3 class="project-title">OMC Requirement Portal</h3>
-                    <p class="project-description">
-                        Dynamic portal for managing and tracking project requirements with real-time
-                        updates, scalable MongoDB storage, and Azure deployment for high availability.
-                    </p>
-                    <div class="project-tech">
-                        <span>.NET Core</span>
-                        <span>MongoDB</span>
-                        <span>Azure Services</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-hard-hat"></i>
-                        </div>
-                    </div>
-                    <h3 class="project-title">EnsafeNxt Safety API</h3>
-                    <p class="project-description">
-                        Employee Safety Management API for incident reporting, hazard recognition,
-                        and compliance monitoring. Uses Azure Functions for serverless task execution.
-                    </p>
-                    <div class="project-tech">
-                        <span>.NET Core 7</span>
-                        <span>Oracle</span>
-                        <span>Azure Functions</span>
-                        <span>App Insights</span>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-boxes-stacked"></i>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Asset Management System</h3>
-                    <p class="project-description">
-                        ERP model web application for comprehensive asset tracking with modules for
-                        Allocation, Employee, Engineer, and Help-desk management.
-                    </p>
-                    <div class="project-tech">
-                        <span>ASP.NET</span>
-                        <span>SQL Server</span>
-                        <span>ADO.NET</span>
-                        <span>Stored Procedures</span>
-                    </div>
-                </div>
-
-                <!-- GitHub Showcase: AatmanAI -->
-                <a href="https://github.com/iamchittaranjandas/AatmanAI" target="_blank" rel="noopener" class="project-card github-project animate-on-scroll">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-tag open-source">Open Source</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">AatmanAI</h3>
-                    <p class="project-description">
-                        Cross-platform AI-powered application built with .NET MAUI. Brings AI capabilities
-                        to desktop and mobile with a native experience across Windows, macOS, Android, and iOS.
-                    </p>
-                    <div class="project-tech">
-                        <span>.NET MAUI</span>
-                        <span>C#</span>
-                        <span>AI Integration</span>
-                        <span>Cross-platform</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section section-alt" id="skills">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">04.</span> Technical Skills
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">XML</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3>Frameworks</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">.NET Core (5-9)</span>
-                        <span class="skill-tag">ASP.NET MVC</span>
-                        <span class="skill-tag">.NET Framework</span>
-                        <span class="skill-tag">Entity Framework</span>
-                        <span class="skill-tag">Blazor</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">jQuery</span>
-                        <span class="skill-tag">Bootstrap</span>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-database"></i></div>
-                        <h3>Databases</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">SQL Server</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Oracle</span>
-                        <span class="skill-tag">Dapper</span>
-                        <span class="skill-tag">ADO.NET</span>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                        <h3>Cloud & DevOps</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">Azure Functions</span>
-                        <span class="skill-tag">Azure App Services</span>
-                        <span class="skill-tag">App Insights</span>
-                        <span class="skill-tag">IIS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-cogs"></i></div>
-                        <h3>Practices</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">MVC Pattern</span>
-                        <span class="skill-tag">Clean Architecture</span>
-                        <span class="skill-tag">Repository Pattern</span>
-                        <span class="skill-tag">Dependency Injection</span>
-                        <span class="skill-tag">SOLID Principles</span>
-                        <span class="skill-tag">OOP</span>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll">
-                    <div class="skill-category-header">
-                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                        <h3>AI & Tools</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Claude AI</span>
-                        <span class="skill-tag">AI-Assisted Dev</span>
-                        <span class="skill-tag">LINQ</span>
-                        <span class="skill-tag">AJAX</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">05.</span> Education
-            </h2>
-            <div class="education-grid">
-                <div class="education-card animate-on-scroll">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-degree">
-                            <h3>Bachelor of Computer Applications (BCA)</h3>
-                            <span class="education-year"><i class="fas fa-calendar"></i> 2016 - 2019</span>
-                        </div>
-                        <h4><i class="fas fa-building-columns"></i> Utkal University, Odisha</h4>
-                        <p class="education-desc">
-                            Studied core computer science fundamentals including Data Structures, Algorithms,
-                            Database Management Systems, Object-Oriented Programming, Software Engineering,
-                            and Web Technologies. Built a strong foundation in programming with C, C++, and Java.
+                        <p class="desc-text mt-4">
+                            Sr. Software Developer over 5.6+ years engineering robust, scalable applications using
+                            <strong>.NET Core, C#, Azure</strong>, handling complex enterprise requirements.
                         </p>
-                        <div class="education-tags">
-                            <span>Data Structures</span>
-                            <span>DBMS</span>
-                            <span>OOP</span>
-                            <span>Software Engineering</span>
-                            <span>Web Technologies</span>
-                            <span>C/C++</span>
-                            <span>Java</span>
+                        <div class="mt-6 pt-4 border-t border-glass">
+                            <h4 class="desc-text-xs text-muted mb-3 uppercase tracking-wide">Let's Connect</h4>
+                            <div class="flex-between flex-wrap gap-2">
+                                <p class="desc-text-sm text-muted mono-text m-0"
+                                    style="display: flex; align-items: center;">
+                                    <i class="fas fa-location-dot text-accent mr-2"></i> Bhubaneswar, Odisha, India
+                                </p>
+                                <a href="tel:+919337428190" class="btn btn-outline desc-text-sm mono-text m-0"
+                                    style="padding: 6px 12px; font-size: 0.8rem;">
+                                    <i class="fas fa-phone text-accent mr-2"></i> +91 9337428190
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avatar Card -->
+                <div class="bento-card col-span-1 row-span-1 bento-avatar reveal delay-1">
+                    <div class="bento-glow"></div>
+                    <div class="avatar-wrapper">
+                        <img src="profile.jpg" alt="Chitta Ranjan Das" class="avatar-img">
+                    </div>
+                </div>
+
+                <!-- Contact / CTA Card -->
+                <div class="bento-card col-span-1 row-span-1 bento-cta reveal delay-2">
+                    <div class="bento-glow"></div>
+                    <div class="card-content flex-center-col">
+                        <h3 class="mono-text subtitle">Let's Connect</h3>
+                        <div class="social-links mt-4">
+                            <a href="mailto:myselfchitta@gmail.com" class="social-btn" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/iamchittaranjandas" target="_blank" class="social-btn"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/iamchittaranjandas/" target="_blank" class="social-btn"
+                                title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="tel:+919337428190" class="social-btn" title="Phone"><i
+                                    class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="bento-card col-span-1 row-span-1 bento-stat reveal delay-3">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <span class="stat-num mono-text"><span class="count-up" data-target="5.6">0</span>+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                </div>
+
+                <div class="bento-card col-span-1 row-span-1 bento-stat reveal delay-4">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <span class="stat-num mono-text"><span class="count-up" data-target="7">0</span>+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section bento-section">
+            <h2 class="section-title mono-text reveal"><span class="text-accent">01.</span> About</h2>
+
+            <div class="bento-grid about-grid">
+                <!-- Text Content -->
+                <div class="bento-card col-span-2 row-span-3 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <h3 class="title-md mb-4">The Architect's Mindset</h3>
+                        <p class="desc-text mb-4">
+                            I thrive on translating complex, ambiguous business requirements into elegant,
+                            high-performance digital solutions. With over 5.6 years of deep technical experience working
+                            alongside government sectors and private enterprises, I have spearheaded the development of
+                            mission-critical systems. This includes highly secure bill management platforms handling RBI
+                            NEFT/RTGS disbursements, comprehensive HRMS solutions, and rigorous safety compliance APIs.
+                        </p>
+                        <p class="desc-text mb-4">
+                            My engineering philosophy is deeply rooted in building systems that last. I am an absolute
+                            advocate of <strong>Clean Architecture</strong>, Domain-Driven Design (DDD), and strict
+                            adherence to SOLID principles. By decoupling core business logic from infrastructural
+                            concerns using patterns like CQRS and MediatR, I ensure that the applications I build are
+                            not only scalable but incredibly maintainable for large teams.
+                        </p>
+                        <p class="desc-text">
+                            Beyond traditional enterprise web architecture, I am passionate about the frontier of
+                            offline, privacy-first AI. Recently, I have heavily integrated AI-assisted workflows into my
+                            day-to-day stack to supercharge development efficiency. Whether it's optimizing complex
+                            PostgreSQL queries, deploying robust Azure Functions, or architecting on-device LLMs for
+                            mobile processors, I bring a holistic, systems-thinking mindset to every single codebase.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="bento-card col-span-1 row-span-1 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content flex-col-between">
+                        <div>
+                            <span class="mono-text subtitle text-accent"><i class="fas fa-graduation-cap"></i>
+                                Education</span>
+                            <h4 class="title-sm mt-2">BCA</h4>
+                            <p class="desc-text-sm text-muted">Utkal University</p>
+                        </div>
+                        <span class="mono-text text-xs mt-4">2016 - 2019</span>
+                    </div>
+                </div>
+
+                <!-- Accolades card -->
+                <div class="bento-card col-span-1 row-span-1 bg-accent reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content flex-center-col text-center">
+                        <i class="fas fa-trophy text-4xl mb-3"></i>
+                        <h4 class="title-sm">2x Best Performer</h4>
+                        <p class="desc-text-sm mt-1 opacity-80">Technology Team (2024 & 2025)</p>
+                    </div>
+                </div>
+
+                <!-- Award Picture -->
+                <div class="bento-card col-span-2 row-span-2 p-0 border-glass bento-img reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full" style="padding: 0;">
+                        <img src="aboutus.jpg" alt="Best Performer Award" class="cover-img"
+                            style="object-position: center top;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section bento-section">
+            <h2 class="section-title mono-text reveal"><span class="text-accent">02.</span> Experience</h2>
+
+            <div class="bento-grid exp-grid">
+
+                <!-- Current Role -->
+                <div class="bento-card col-span-4 row-span-1 highlight-border reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <div class="flex-between mb-4 flex-wrap gap-2">
+                            <div>
+                                <span class="tag tag-active">Current</span>
+                                <h3 class="title-md mt-2">Sr. Software Developer</h3>
+                                <p class="desc-text-sm text-muted mt-1">NetCreativeMind Solutions / Client: NIC (Govt.
+                                    of Arunachal Pradesh)</p>
+                            </div>
+                            <span class="mono-text text-sm border-pill">Dec 2025 - Present</span>
+                        </div>
+                        <p class="desc-text">
+                            Leading development of government financial management systems. Building enterprise-grade,
+                            secure, and scalable high-availability applications adhering to strict compliance standards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="bento-card col-span-4 row-span-1 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <div class="flex-between mb-4 flex-wrap gap-2">
+                            <div>
+                                <h3 class="title-md">Sr. Software Developer</h3>
+                                <p class="desc-text-sm text-muted mt-1">Silicon Techlab / Client: NIC (Govt. of
+                                    Arunachal Pradesh)</p>
+                            </div>
+                            <span class="mono-text text-sm border-pill">Aug 2025 - Dec 2025</span>
+                        </div>
+                        <p class="desc-text">
+                            Spearheaded development on critical government bill management frameworks and continuous
+                            PFMS integration logic.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="bento-card col-span-4 row-span-1 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <div class="flex-between mb-4 flex-wrap gap-2">
+                            <div>
+                                <h3 class="title-md">Software Developer</h3>
+                                <p class="desc-text-sm text-muted mt-1">Tatwa Technologies Ltd</p>
+                            </div>
+                            <span class="mono-text text-sm border-pill">Oct 2021 - Jul 2025</span>
+                        </div>
+                        <p class="desc-text">
+                            Developed multiple enterprise applications including HRMS, OMC portals, and robust safety
+                            management systems deployed entirely over Azure using microservices and REST API
+                            architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Earlier Roles Compact -->
+                <div class="bento-card col-span-4 row-span-1 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <div class="flex-between align-center">
+                            <div>
+                                <h3 class="title-sm">Software Developer & Intern</h3>
+                                <p class="desc-text-sm text-muted">Appman Technologies Pvt. Ltd</p>
+                            </div>
+                            <span class="mono-text text-sm border-pill">2019 - 2021</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Achievements Section -->
-    <section class="section section-alt" id="achievements">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">06.</span> Achievements
-            </h2>
-            <div class="achievements-grid">
-                <div class="achievement-card animate-on-scroll">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
+        <!-- Projects Section -->
+        <section id="projects" class="section bento-section">
+            <div class="flex-between mb-8 section-header reveal">
+                <h2 class="section-title mono-text m-0"><span class="text-accent">03.</span> Projects</h2>
+                <a href="https://github.com/iamchittaranjandas" target="_blank" class="btn btn-outline text-sm"><i
+                        class="fab fa-github"></i> View All</a>
+            </div>
+
+            <div class="bento-grid project-grid">
+
+                <!-- Project 1 (Large) -->
+                <div class="bento-card col-span-4 row-span-2 enterprise-card reveal delay-0">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full flex-col-between">
+                        <div>
+                            <div class="flex-between mb-4">
+                                <div class="flex-center">
+                                    <i class="fas fa-server text-4xl text-accent mr-4"></i>
+                                    <div>
+                                        <h3 class="title-md">.NET Enterprise API <span class="tag tag-active ml-2"
+                                                style="font-size:0.6rem;">.NET 10</span></h3>
+                                        <p class="mono-text text-xs mt-1 text-muted">Clean Architecture REST API</p>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/iamchittaranjandas/dotnet-enterprise-api" target="_blank"
+                                    class="btn btn-outline p-2" style="font-size: 0.8rem; padding: 6px 12px;"><i
+                                        class="fab fa-github"></i> Source</a>
+                            </div>
+
+                            <p class="desc-text-sm text-muted mb-4">
+                                A production-ready, enterprise-grade REST API built following Clean Architecture, SOLID,
+                                CQRS, and Domain-Driven Design (DDD). Showcases multi-database support and distributed
+                                caching.
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px;">
+                                <div class="text-xs text-muted"><i class="fas fa-layer-group text-accent mr-2"></i>
+                                    <strong>Clean Architecture</strong> & DDD
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-exchange-alt text-accent mr-2"></i>
+                                    <strong>CQRS Pattern</strong> via MediatR
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-database text-accent mr-2"></i>
+                                    <strong>Multi-Database</strong> (SQL/PgSQL/MySQL/Oracle)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-plug text-accent mr-2"></i>
+                                    <strong>Multi-Provider</strong> (EF Core/Dapper/ADO)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-tachometer-alt text-accent mr-2"></i>
+                                    <strong>Enterprise Features</strong> (Rate Limits, Redis)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-lock text-accent mr-2"></i>
+                                    <strong>Security</strong> (JWTAuth, BCrypt, RBAC)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-stack-mini">
+                            <span class="pill border-accent text-accent">.NET 10</span>
+                            <span class="pill">MediatR</span>
+                            <span class="pill">EF Core & Dapper</span>
+                            <span class="pill">Redis</span>
+                            <span class="pill">OpenTelemetry</span>
+                        </div>
                     </div>
-                    <h3>2x Best Performer</h3>
-                    <p>Best Performer of the Technology Team in both 2024 and 2025</p>
-                    <span class="achievement-year">2024 & 2025</span>
                 </div>
-            </div>
 
-            <!-- Certifications -->
-            <h3 class="subsection-title animate-on-scroll">
-                <i class="fas fa-award"></i> Certifications
-            </h3>
-            <div class="cert-grid">
-                <a href="https://www.udemy.com/certificate/UC-99cb0070-64a5-4ff0-9137-cca76ed8d907/" target="_blank" rel="noopener" class="cert-card animate-on-scroll">
-                    <div class="cert-image-wrapper">
-                        <img src="certificate/Csharp.jpg" alt="C# 13 Ultimate Guide Certificate" class="cert-image">
-                    </div>
-                    <div class="cert-info">
-                        <span class="cert-issuer"><i class="fas fa-graduation-cap"></i> Udemy</span>
-                        <h4>C# 13 - Ultimate Guide - Beginner to Advanced | Master class</h4>
-                        <p>60.5 total hours of comprehensive C# training</p>
-                        <div class="cert-footer">
-                            <span class="cert-date">Mar 2023</span>
-                            <span class="cert-view"><i class="fas fa-external-link-alt"></i> Verify</span>
+                <!-- Project 2 -->
+                <div class="bento-card col-span-2 row-span-2 enterprise-card reveal delay-1">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full flex-col-between">
+                        <div>
+                            <div class="flex-between mb-4">
+                                <i class="fas fa-file-invoice-dollar text-2xl text-accent"></i>
+                                <span class="tag tag-enterprise">Enterprise</span>
+                            </div>
+                            <h3 class="title-sm mb-2">SPARSH Bill Management</h3>
+                            <p class="desc-text-xs text-muted mb-4">
+                                Comprehensive bill management for Arunachal Pradesh State Health Society with PFMS API
+                                logic and RBI NEFT/RTGS disbursements.
+                            </p>
+                        </div>
+                        <div class="tech-stack-mini">
+                            <span class="pill">.NET Core 8</span>
+                            <span class="pill">PostgreSQL</span>
+                            <span class="pill">jQuery</span>
                         </div>
                     </div>
-                </a>
-
-                <a href="https://verify.skilljar.com/c/4ai393tj4i8h" target="_blank" rel="noopener" class="cert-card animate-on-scroll">
-                    <div class="cert-image-wrapper">
-                        <img src="certificate/AIFluency.png" alt="AI Fluency Framework & Foundations Certificate" class="cert-image">
-                    </div>
-                    <div class="cert-info">
-                        <span class="cert-issuer"><i class="fas fa-robot"></i> Anthropic</span>
-                        <h4>AI Fluency: Framework & Foundations</h4>
-                        <p>Practical usage of AI in software engineering workflows</p>
-                        <div class="cert-footer">
-                            <span class="cert-date">Mar 2026</span>
-                            <span class="cert-view"><i class="fas fa-external-link-alt"></i> Verify</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://verify.skilljar.com/c/8xuvuha6bxgr" target="_blank" rel="noopener" class="cert-card animate-on-scroll">
-                    <div class="cert-image-wrapper">
-                        <img src="certificate/Claude101.png" alt="Claude 101 Certificate" class="cert-image">
-                    </div>
-                    <div class="cert-info">
-                        <span class="cert-issuer"><i class="fas fa-robot"></i> Anthropic</span>
-                        <h4>Claude 101</h4>
-                        <p>Fundamentals of working with Claude AI</p>
-                        <div class="cert-footer">
-                            <span class="cert-date">Mar 2026</span>
-                            <span class="cert-view"><i class="fas fa-external-link-alt"></i> Verify</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://verify.skilljar.com/c/bn7ggcsxv5qp" target="_blank" rel="noopener" class="cert-card animate-on-scroll">
-                    <div class="cert-image-wrapper">
-                        <img src="certificate/ClaudeCodeInAction.png" alt="Claude Code in Action Certificate" class="cert-image">
-                    </div>
-                    <div class="cert-info">
-                        <span class="cert-issuer"><i class="fas fa-robot"></i> Anthropic</span>
-                        <h4>Claude Code in Action</h4>
-                        <p>AI-assisted development, context-aware coding & advanced integration</p>
-                        <div class="cert-footer">
-                            <span class="cert-date">Mar 2026</span>
-                            <span class="cert-view"><i class="fas fa-external-link-alt"></i> Verify</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="section-number">07.</span> Get In Touch
-            </h2>
-            <div class="contact-content animate-on-scroll">
-                <p class="contact-text">
-                    I'm always open to discussing new projects, creative ideas, or opportunities
-                    to be part of something great. Feel free to reach out!
-                </p>
-                <div class="contact-cards">
-                    <a href="mailto:myselfchitta@gmail.com" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">myselfchitta@gmail.com</span>
-                    </a>
-                    <a href="tel:+919337428190" class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <span class="contact-label">Phone</span>
-                        <span class="contact-value">+91 9337428190</span>
-                    </a>
-                    <a href="https://github.com/iamchittaranjandas" target="_blank" rel="noopener" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <span class="contact-label">GitHub</span>
-                        <span class="contact-value">iamchittaranjandas</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/iamchittaranjandas/" target="_blank" rel="noopener" class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">iamchittaranjandas</span>
-                    </a>
                 </div>
-                <a href="mailto:myselfchitta@gmail.com" class="btn btn-primary btn-lg">
-                    <i class="fas fa-paper-plane"></i> Say Hello
-                </a>
+
+                <!-- Smaller Projects -->
+                <div class="bento-card col-span-2 row-span-1 project-link reveal delay-2">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <i class="fas fa-users-cog text-xl mb-2"></i>
+                        <h3 class="title-sm">HRMS Web API</h3>
+                        <p class="desc-text-xs text-muted mt-1">Robust HR management system backed by Azure App
+                            Services.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card col-span-2 row-span-1 project-link reveal delay-3">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <i class="fas fa-hard-hat text-xl mb-2"></i>
+                        <h3 class="title-sm">EnsafeNxt Safety API</h3>
+                        <p class="desc-text-xs text-muted mt-1">Incident reporting via Oracle and Azure Functions.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card col-span-4 row-span-2 enterprise-card reveal delay-4">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full flex-col-between">
+                        <div>
+                            <div class="flex-between mb-4">
+                                <div class="flex-center">
+                                    <i class="fas fa-brain text-4xl text-accent mr-4"></i>
+                                    <div>
+                                        <h3 class="title-md">Aatman AI <span class="tag tag-active ml-2"
+                                                style="font-size:0.6rem;">Privacy-First</span></h3>
+                                        <p class="mono-text text-xs mt-1 text-muted">Offline On-Device LLM Assistant</p>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/iamchittaranjandas/AatmanAI" target="_blank"
+                                    class="btn btn-outline p-2" style="font-size: 0.8rem; padding: 6px 12px;"><i
+                                        class="fab fa-github"></i> Source</a>
+                            </div>
+
+                            <p class="desc-text-sm text-muted mb-4">
+                                A privacy-first, on-device AI assistant for Android and iOS. Inference runs entirely
+                                locally on your mobile processor using lightweight quantized GGUF LLM models via
+                                <strong>llama.cpp</strong>. No cloud, no servers, zero data collection.
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px;">
+                                <div class="text-xs text-muted"><i class="fas fa-shield-alt text-accent mr-2"></i>
+                                    <strong>100% Private</strong> processing
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-network-wired text-accent mr-2"></i>
+                                    <strong>Offline-First</strong> (after model dl)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-file-alt text-accent mr-2"></i>
+                                    <strong>Document RAG</strong> Vault context
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-server text-accent mr-2"></i>
+                                    <strong>Multi-Model</strong> (SmolLM2, Qwen, Gemma)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-language text-accent mr-2"></i>
+                                    <strong>Multilingual</strong> (10+ Languages)
+                                </div>
+                                <div class="text-xs text-muted"><i class="fas fa-bolt text-accent mr-2"></i>
+                                    <strong>Native Performance</strong> (ARM64 binary)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-stack-mini">
+                            <span class="pill border-accent text-accent">.NET 9 MAUI</span>
+                            <span class="pill">llama.cpp</span>
+                            <span class="pill">MVVM</span>
+                            <span class="pill">SQLite</span>
+                            <span class="pill">GGUF</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bento-section">
+            <h2 class="section-title mono-text reveal"><span class="text-accent">04.</span> Skills & Certs</h2>
+
+            <div class="bento-grid skills-grid">
+
+                <!-- Large Skills Card -->
+                <div class="bento-card col-span-2 row-span-2 reveal">
+                    <div class="bento-glow"></div>
+                    <div class="card-content">
+                        <h3 class="title-sm mb-6 mono-text border-bottom pb-2"><i class="fas fa-terminal mr-2"></i>Tech
+                            Stack</h3>
+
+                        <div class="skill-group mb-6">
+                            <h4 class="desc-text-xs text-muted mb-2 uppercase tracking-wide">Backend & Core</h4>
+                            <div class="tech-stack-mini">
+                                <span class="pill pill-outline">C#</span>
+                                <span class="pill pill-outline">.NET Core (5-9)</span>
+                                <span class="pill pill-outline">ASP.NET MVC</span>
+                                <span class="pill pill-outline">Entity Framework</span>
+                                <span class="pill pill-outline">Dapper</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group mb-6">
+                            <h4 class="desc-text-xs text-muted mb-2 uppercase tracking-wide">Databases & Cloud</h4>
+                            <div class="tech-stack-mini">
+                                <span class="pill pill-outline">SQL Server</span>
+                                <span class="pill pill-outline">PostgreSQL</span>
+                                <span class="pill pill-outline">MongoDB</span>
+                                <span class="pill pill-outline">Oracle</span>
+                                <span class="pill pill-outline">Azure App Services</span>
+                                <span class="pill pill-outline">Azure Functions</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4 class="desc-text-xs text-muted mb-2 uppercase tracking-wide">Architecture & FrontEnd
+                            </h4>
+                            <div class="tech-stack-mini">
+                                <span class="pill pill-outline">Clean Architecture</span>
+                                <span class="pill pill-outline">Microservices</span>
+                                <span class="pill pill-outline">JavaScript</span>
+                                <span class="pill pill-outline">React</span>
+                                <span class="pill pill-outline">Blazor</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Certifications Area -->
+                <a href="https://www.udemy.com/certificate/UC-99cb0070-64a5-4ff0-9137-cca76ed8d907/" target="_blank"
+                    class="bento-card col-span-1 row-span-1 p-0 cert-mini bento-img reveal delay-1">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full" style="padding: 0;">
+                        <img src="certificate/Csharp.jpg" alt="C# 13 Ultimate" class="cover-img">
+                        <div class="hover-overlay-cert"><i class="fas fa-external-link-alt"></i> Verify</div>
+                    </div>
+                </a>
+
+                <a href="https://verify.skilljar.com/c/4ai393tj4i8h" target="_blank"
+                    class="bento-card col-span-1 row-span-1 p-0 cert-mini bento-img reveal delay-2">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full" style="padding: 0;">
+                        <img src="certificate/AIFluency.png" alt="AI Fluency" class="cover-img">
+                        <div class="hover-overlay-cert"><i class="fas fa-external-link-alt"></i> Verify</div>
+                    </div>
+                </a>
+
+                <a href="https://verify.skilljar.com/c/8xuvuha6bxgr" target="_blank"
+                    class="bento-card col-span-1 row-span-1 p-0 cert-mini bento-img reveal delay-3">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full" style="padding: 0;">
+                        <img src="certificate/Claude101.png" alt="Claude 101" class="cover-img">
+                        <div class="hover-overlay-cert"><i class="fas fa-external-link-alt"></i> Verify</div>
+                    </div>
+                </a>
+
+                <a href="https://verify.skilljar.com/c/bn7ggcsxv5qp" target="_blank"
+                    class="bento-card col-span-1 row-span-1 p-0 cert-mini bento-img reveal delay-4">
+                    <div class="bento-glow"></div>
+                    <div class="card-content h-full" style="padding: 0;">
+                        <img src="certificate/ClaudeCodeInAction.png" alt="Claude Code in Action" class="cover-img">
+                        <div class="hover-overlay-cert"><i class="fas fa-external-link-alt"></i> Verify</div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>Designed & Built by <span class="gradient-text">Chitta Ranjan Das</span></p>
-                <div class="footer-links">
-                    <a href="https://github.com/iamchittaranjandas" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/iamchittaranjandas/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:myselfchitta@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+    <footer class="footer mt-12 py-8 border-t border-glass">
+        <div class="container text-center">
+            <p class="mono-text text-sm text-muted">
+                Designed & Built by <span class="text-white font-bold">Chitta Ranjan Das</span>
+            </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

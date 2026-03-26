@@ -15,32 +15,33 @@ let charIndex = 0;
 let isDeleting = false;
 const typewriterEl = document.getElementById('typewriter');
 
-function typewrite() {
-    const currentPhrase = typewriterPhrases[phraseIndex];
+if (typewriterEl) {
+    function typewrite() {
+        const currentPhrase = typewriterPhrases[phraseIndex];
 
-    if (isDeleting) {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
+        if (isDeleting) {
+            typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 30 : 60;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            speed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+            speed = 500;
+        }
+
+        setTimeout(typewrite, speed);
     }
-
-    let speed = isDeleting ? 30 : 60;
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        speed = 2000;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
-        speed = 500;
-    }
-
-    setTimeout(typewrite, speed);
+    typewrite();
 }
-
-typewrite();
 
 // ========================================
 // Scroll Animations (Intersection Observer)
@@ -53,12 +54,12 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add('active');
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
+document.querySelectorAll('.reveal').forEach(el => {
     observer.observe(el);
 });
 
@@ -68,13 +69,15 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    if (navbar) {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }
 });
 
 // ========================================
 // Active Nav Link on Scroll
 // ========================================
-const sections = document.querySelectorAll('.section, .hero');
+const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
@@ -87,9 +90,9 @@ window.addEventListener('scroll', () => {
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove('text-primary');
         if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+            link.classList.add('text-primary');
         }
     });
 });
@@ -100,25 +103,24 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const navLinksContainer = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinksContainer.classList.toggle('active');
-});
-
-// Close menu on link click and outside click
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinksContainer.classList.remove('active');
+if (hamburger && navLinksContainer) {
+    hamburger.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
     });
-});
 
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinksContainer.contains(e.target) && navLinksContainer.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        navLinksContainer.classList.remove('active');
-    }
-});
+    // Close menu on link click and outside click
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinksContainer.contains(e.target) && navLinksContainer.classList.contains('active')) {
+            navLinksContainer.classList.remove('active');
+        }
+    });
+}
 
 // ========================================
 // Theme Toggle
@@ -130,17 +132,19 @@ const root = document.documentElement;
 const savedTheme = localStorage.getItem('theme') || 'dark';
 root.setAttribute('data-theme', savedTheme);
 
-themeToggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    });
+}
 
 // ========================================
 // Animated Counter
 // ========================================
-const statNumbers = document.querySelectorAll('.stat-number');
+const statNumbers = document.querySelectorAll('.count-up');
 
 const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -148,7 +152,7 @@ const counterObserver = new IntersectionObserver((entries) => {
             const el = entry.target;
             const target = parseFloat(el.dataset.target);
             const isDecimal = target % 1 !== 0;
-            const duration = 1500;
+            const duration = 2000; // 2 seconds
             const startTime = performance.now();
 
             function updateCounter(currentTime) {
@@ -176,36 +180,23 @@ const counterObserver = new IntersectionObserver((entries) => {
 statNumbers.forEach(el => counterObserver.observe(el));
 
 // ========================================
-// Cursor Glow Effect (desktop only)
+// Bento Card Mouse Glow Effect (Premium Flashlight)
 // ========================================
-const cursorGlow = document.getElementById('cursorGlow');
-
 if (window.matchMedia('(pointer: fine)').matches) {
-    document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, ${getComputedStyle(root).getPropertyValue('--accent-glow').trim().replace(')', ', 0.08)')}, transparent 40%)`;
-        cursorGlow.classList.add('active');
-    });
+    const cards = document.querySelectorAll('.bento-card');
 
-    document.addEventListener('mouseleave', () => {
-        cursorGlow.classList.remove('active');
-    });
-}
+    cards.forEach(card => {
+        const glow = card.querySelector('.bento-glow');
+        if (!glow) return;
 
-// ========================================
-// Parallax Background Orbs
-// ========================================
-const orbs = document.querySelectorAll('.orb');
-if (window.matchMedia('(pointer: fine)').matches && orbs.length > 0) {
-    document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 2;
-        const y = (e.clientY / window.innerHeight - 0.5) * 2;
-        
-        requestAnimationFrame(() => {
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 20;
-                orb.style.marginLeft = `${x * speed}px`;
-                orb.style.marginTop = `${y * speed}px`;
-            });
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            // Calculate mouse position relative to card
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Move the glow element using transform translate to follow the mouse perfectly
+            glow.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
         });
     });
 }
